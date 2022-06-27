@@ -6,7 +6,7 @@ import Slide from 'react-reveal/Slide'
 function Home() {
   return (
     <div>
-      <header className="flex justify-around items-center h-28 bg-[#141C3A] text-white">
+      <header className="flex justify-around items-center h-28 bg-[#141C3A] text-white sticky top-0 z-10">
        <Slide bottom cascade>
        <div>
           <h1 className="text-4xl  transition duration-300  font-semibold">
@@ -15,7 +15,7 @@ function Home() {
         </div>
         <div>
           <a
-            href="#"
+            href="#projetos"
             className="p-2 mr-6 text-xl hover:text-fuchsia-500  transition duration-300"
           >
             Projetos
@@ -154,7 +154,7 @@ function Home() {
         </div>
       </div>
   
-      <section className="w-full h-full mt-40 border-b-2 border-gray-300">
+      <section className="w-full h-full mt-40 border-b-2 border-gray-300" id="projetos">
         <div className="w-full max-w-screen-xl m-auto">
           <Fade bottom cascade>
           <div className="text-center">

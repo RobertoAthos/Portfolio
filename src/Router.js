@@ -1,7 +1,7 @@
 import React from 'react'
 import {Routes, Route} from 'react-router-dom'
-import Contato from './Pages/Contato.tsx'
-import Home from './Pages/Home.tsx'
+import Contato from './Pages/Contato'
+import Home from './Pages/Home'
 
 function Router() {
   return (
