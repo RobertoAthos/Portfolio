@@ -1,19 +1,27 @@
-import React from "react";
+import React,{useState} from "react";
 import {Link} from 'react-router-dom'
 import Fade from 'react-reveal/Fade'
 import Slide from 'react-reveal/Slide'
+import {FaBars} from 'react-icons/fa'
 
 function Home() {
+
+    const[nav,setNav] = useState(false)
+
+    const handleClick = ()=>{
+      setNav(!nav)
+    }
+
   return (
     <div>
       <header className="flex justify-around items-center h-28 bg-[#141C3A] text-white sticky top-0 z-10">
        <Slide bottom cascade>
        <div>
-          <h1 className="text-4xl  transition duration-300  font-semibold">
+          <h1 className="text-3xl md:text-4xl font-semibold">
               Roberto Developer
           </h1>
         </div>
-        <div>
+        <div className="hidden md:flex">
           <a
             href="#projetos"
             className="p-2 mr-6 text-xl hover:text-fuchsia-500  transition duration-300"
@@ -32,15 +40,27 @@ function Home() {
           </Link>
         </div>
        </Slide>
+       <div onClick={handleClick} className="md:hidden z-10 cursor-pointer text-4xl">
+              <FaBars/>
+            </div>
+
+            <nav className={!nav ? 'hidden' : 'absolute top-0 left-0 w-full h-screen bg-[#141C3A] flex flex-col justify-center items-center' }>
+                <ul className="text-center">
+                    <li className="mb-20 text-4xl"><a href="#projetos">Projetos</a></li>
+                    <li className="mb-20 text-4xl"><Link to='/Contato'><a href="Contato">Diga Olá</a></Link></li>
+                    <li className="mb-20 text-4xl"><a href="#">Whatsapp</a></li>
+                </ul>
+            </nav>
+       
       </header>
 
       <section className="w-full h-full">
         <div className="w-full h-full text-center mt-20">
           <Fade bottom cascade>
-          <h2 className="text-[#141C3A] text-5xl font-bold mb-4">
+          <h2 className="text-3xl md:text-5xl text-[#141C3A] font-bold mb-4">
             Junior Front End Developer
           </h2>
-          <p className="text-2xl text-gray-500 font-light ">
+          <p className="text-xl md:text-2xl text-gray-500 font-light ">
             Transformo sonhos em realidade com códigos.
           </p>
           
@@ -54,10 +74,10 @@ function Home() {
       <section className="w-full h-full bg-gradient-to-r from-blue-500 to-blue-700 p-6 mt-40">
         <div className="text-center pt-20 w-full max-w-screen-lg m-auto leading-relaxed ">
           <Fade bottom cascade>
-          <h3 className="text-4xl text-white font-bold mb-6">
+          <h3 className="text-3xl md:text-4xl text-white font-bold mb-6">
             Olá, eu sou o Roberto. Prazer em conhece-lo(a).
           </h3>
-          <p className="text-white font-extralight text-2xl mb-48">
+          <p className="text-xl md:text-2xl text-white font-extralight  mb-48">
             Since beginning my journey as a freelance designer nearly 10 years
             ago, I've done remote work for agencies, consulted for startups, and
             collaborated with talented people to create digital products for
@@ -71,7 +91,7 @@ function Home() {
       
       <div className="w-full max-w-screen-xl flex justify-around items-center m-auto flex-wrap -mt-36">
       <Slide bottom cascade>
-        <div className="w-96 text-center rounded-3xl border-solid border-2 border-gray-200 p-4 bg-white shadow-md">
+        <div className="mb-10 w-96 md:w-96 text-center rounded-3xl border-solid border-2 border-gray-200 p-4 bg-white shadow-md">
           <div className="w-full flex justify-center items-center mt-6">
             <img src="Assets/web-design.png" />
           </div>
@@ -96,7 +116,7 @@ function Home() {
           </div>
         </div>
         </Slide>
-        <div className="w-96 text-center p-4 border-solid border-2 border-gray-200 rounded-3xl  bg-white shadow-md ">
+        <div className="mb-10 w-96 md:w-96 text-center p-4 border-solid border-2 border-gray-200 rounded-3xl  bg-white shadow-md ">
           <Slide bottom cascade>
           <div className="w-full flex justify-center items-center mt-6">
             <img src="Assets/web-programming.png" />
@@ -126,7 +146,7 @@ function Home() {
           </Slide>
         </div>
        
-        <div className="w-96 text-center rounded-3xl border-solid border-2 border-gray-200 p-4 bg-white shadow-md ">
+        <div className="mb-10 w-96 md:w-96 text-center rounded-3xl border-solid border-2 border-gray-200 p-4 bg-white shadow-md ">
         <Slide bottom cascade>
           <div className="w-full flex justify-center items-center mt-6">
             <img src="Assets/binary-code.png" />
@@ -158,10 +178,10 @@ function Home() {
         <div className="w-full max-w-screen-xl m-auto">
           <Fade bottom cascade>
           <div className="text-center">
-            <h2 className="text-4xl text-[#141C3A] font-bold mb-6">
+            <h2 className="text-3xl md:text-4xl text-[#141C3A] font-bold mb-6">
               Meus Trabalhos Recentes
             </h2>
-            <p className="text-2xl font-extralight">
+            <p className="text-xl md:text-2xl font-extralight">
               Aqui está um pouco dos meus projetos que trabalhei recentemente.
               Quer ver mais?
               <span className="text-blue-700 hover:underline font-bold">
@@ -172,22 +192,22 @@ function Home() {
           </Fade>
           <div className='grid grid-cols-1 md:grid-cols-6" md:grid-cols-3 gap-4 mt-10 content-center justify-items-center  '>
             <Slide bottom cascade>
-            <div className="bg-blue-300  rounded-3xl h-60 w-96 flex justify-center items-center  shadow-2xl">
+            <div className="w-72 md: w-96bg-blue-300  rounded-3xl h-60 flex justify-center items-center  shadow-2xl">
               <p className="text-2xl text-white">Em Breve...</p>
             </div>
-            <div className="bg-blue-300  rounded-3xl h-60 w-96 flex justify-center items-center shadow-2xl">
+            <div className="w-72 md: w-96bg-blue-300  rounded-3xl h-60 flex justify-center items-center shadow-2xl">
               <p className="text-2xl text-white">Em Breve...</p>
             </div>
-            <div className="bg-blue-300 rounded-3xl h-60 w-96 flex justify-center items-center shadow-2xl">
+            <div className="w-72 md: w-96bg-blue-300 rounded-3xl h-60 flex justify-center items-center shadow-2xl">
               <p className="text-2xl text-white">Em Breve...</p>
             </div>
-            <div className="bg-blue-300  rounded-3xl h-60 w-96 flex justify-center items-center shadow-2xl">
+            <div className="w-72 md: w-96bg-blue-300  rounded-3xl h-60 flex justify-center items-center shadow-2xl">
               <p className="text-2xl text-white">Em Breve...</p>
             </div>
-            <div className="bg-blue-300  rounded-3xl h-60 w-96 flex justify-center items-center shadow-2xl">
+            <div className="w-72 md: w-96bg-blue-300  rounded-3xl h-60 flex justify-center items-center shadow-2xl">
               <p className="text-2xl text-white">Em Breve...</p>
             </div>
-            <div className="bg-blue-300  rounded-3xl h-60 w-96 flex justify-center items-center shadow-2xl">
+            <div className="w-72 md: w-96bg-blue-300  rounded-3xl h-60 flex justify-center items-center shadow-2xl">
               <p className="text-2xl text-white">Em Breve...</p>
             </div>
             </Slide>
@@ -221,8 +241,8 @@ function Home() {
         </Fade>
       </section>
 
-      <footer className="w-full bg-gradient-to-r from-blue-500 to-blue-700 mt-20 h-[80vh]">
-        <div className="w-full flex flex-wrap justify-around items-center bg-[#141C3A] h-36 p-6 text-white shadow-2xl ">
+      <footer className="h-screnn md:h-[80vh] w-full bg-gradient-to-r from-blue-500 to-blue-700 mt-20 ">
+        <div className="h-72 md:h-36  w-full flex flex-wrap justify-around items-center bg-[#141C3A] p-6 text-white shadow-2xl ">
           <div>
             <h3 className="text-4xl font-bold">Começar um Projeto</h3>
           </div>
