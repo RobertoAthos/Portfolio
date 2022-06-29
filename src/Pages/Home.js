@@ -3,6 +3,15 @@ import {Link} from 'react-router-dom'
 import Fade from 'react-reveal/Fade'
 import Slide from 'react-reveal/Slide'
 import {FaBars} from 'react-icons/fa'
+import Cards from "../Components/Cards";
+import designerImg from '../Assets/web-design.png'
+import frontImg from '../Assets/web-programming.png'
+import backImg from '../Assets/binary-code.png'
+import githubImg from '../Assets/github.png'
+import linkedinrImg from '../Assets/linkedin.png'
+import developer from '../Assets/piccoding.svg'
+import Br from '../Assets/brazil.png'
+import Usa from '../Assets/united-states.png'
 
 function Home() {
 
@@ -21,7 +30,11 @@ function Home() {
               Roberto Developer
           </h1>
         </div>
-        <div className="hidden md:flex">
+        <div className="hidden md:flex items-center">
+        <div className="flex">
+              <button className="bg-none p-2 ml-6 flex justify-center items-center hover:text-fuchsia-500">EN<img src={Usa} alt='Brazil flag' className="ml-4"/></button>
+              <button className="bg-none p-2 flex justify-center items-center hover:text-fuchsia-500 ">PT-BR<img src={Br} alt='Usa flag' className="ml-4"/></button>
+         </div>
           <a
             href="#projetos"
             className="p-2 mr-6 text-xl hover:text-fuchsia-500  transition duration-300"
@@ -40,15 +53,19 @@ function Home() {
           </Link>
         </div>
        </Slide>
+       
        <div onClick={handleClick} className="md:hidden z-10 cursor-pointer text-4xl">
               <FaBars/>
             </div>
 
             <nav className={!nav ? 'hidden' : 'absolute top-0 left-0 w-full h-screen bg-[#141C3A] flex flex-col justify-center items-center' }>
-                <ul className="text-center">
-                    <li className="mb-20 text-4xl"><a href="#projetos">Projetos</a></li>
-                    <li className="mb-20 text-4xl"><Link to='/Contato'><a href="Contato">Diga Olá</a></Link></li>
-                    <li className="mb-20 text-4xl"><a href="#">Whatsapp</a></li>
+                <ul className="text-center w-full">
+                    <li className="p-4 w-full border-b-white text-4xl "><a href="#" className="flex justify-center items-center">Pt-br<img src={Br} alt='Brazil flag' className="ml-4"/></a></li>
+                    <li className="p-4 w-full border-b-white text-4xl "><a href="#" className="flex justify-center items-center">Usa<img src={Usa} alt='Brazil flag' className="ml-4"/></a></li>
+                    <li className="p-4 w-full border-b-white text-4xl"><a href="#projetos">Projetos</a></li>
+                    <li className="p-4 w-full border-b-white text-4xl"><Link to='/Contato'><a href="Contato">Diga Olá</a></Link></li>
+                    <li className="p-4 w-full border-b-white text-4xl"><a href="#">Whatsapp</a></li>
+
                 </ul>
             </nav>
        
@@ -65,7 +82,7 @@ function Home() {
           </p>
           
           <div className="w-full flex justify-center items-center mt-9">
-            <img src="Assets/piccoding.svg" width={"300px"} />
+            <img src={developer} width={"300px"} />
           </div>
           </Fade>
         </div>
@@ -77,13 +94,8 @@ function Home() {
           <h3 className="text-3xl md:text-4xl text-white font-bold mb-6">
             Olá, eu sou o Roberto. Prazer em conhece-lo(a).
           </h3>
-          <p className="text-xl md:text-2xl text-white font-extralight  mb-48">
-            Since beginning my journey as a freelance designer nearly 10 years
-            ago, I've done remote work for agencies, consulted for startups, and
-            collaborated with talented people to create digital products for
-            both business and consumer use. I'm quietly confident, naturally
-            curious, and perpetually working on improving my chops one design
-            problem at a time.
+          <p className="text-xl md:text-2xl max-w-screen-md m-auto text-white font-extralight mb-48">
+            Tenho 17 anos e sou fascinado pelo mercado de tecnologia, o poder que a programação possui de criar e resolver problemas das pessoas no cotidiano foi oque me fez apaixonar por essa área. Faço alguns trabalhos freelancer com o intuito de ajudar a crescer as empresas e meu conhecimento. 
           </p>
           </Fade>
         </div>
@@ -91,87 +103,45 @@ function Home() {
       
       <div className="w-full max-w-screen-xl flex justify-around items-center m-auto flex-wrap -mt-36">
       <Slide bottom cascade>
-        <div className="mb-10 w-96 md:w-96 text-center rounded-3xl border-solid border-2 border-gray-200 p-4 bg-white shadow-md">
-          <div className="w-full flex justify-center items-center mt-6">
-            <img src="Assets/web-design.png" />
-          </div>
-          <div className="mb-6">
-            <h3 className="text-2xl font-bold mb-6">Designer</h3>
-            <p className="text-xl font-extralight">
-              I value simple content structure, clean design patterns, and
-              thoughtful interactions.
-            </p>
-          </div>
-          <div className="mb-6">
-            <h3 className="text-blue-700 text-xl mb-6">O que eu faço</h3>
-            <p className="text-xl font-extralight">UX, UI, Web, Mobile, Apps</p>
-          </div>
-          <div className="mb-6">
-            <h3 className="text-blue-700 text-xl mb-6">Design Tools</h3>
-            <ul>
-              <li className="text-xl font-extralight">Figma</li>
-              <li className="text-xl font-extralight">Photoshop</li>
-              <li className="text-xl font-extralight">Adobe xd</li>
-            </ul>
-          </div>
-        </div>
+            <Cards
+              img={designerImg}
+              title="Designer"
+              desc="Não sou nenhum especialista em design, mas sei me virar na maioria das vezes, fiz curso de designer gráfico e tenho uma boa noção sobre o assunto."
+              title2="O que eu faço"       
+              desc2="UX, UI, Web, Mobile, Apps"     
+              title3="Design Tools"
+              desc3="Figma"
+              desc3_2="Photoshop"
+              desc3_3="Adobe xd"
+            />
         </Slide>
-        <div className="mb-10 w-96 md:w-96 text-center p-4 border-solid border-2 border-gray-200 rounded-3xl  bg-white shadow-md ">
-          <Slide bottom cascade>
-          <div className="w-full flex justify-center items-center mt-6">
-            <img src="Assets/web-programming.png" />
-          </div>
-          <div className="mb-6">
-            <h3 className="text-2xl font-bold mb-6">Front-end Developer</h3>
-            <p className="text-xl font-extralight">
-              I like to code things from scratch, and enjoy bringing ideas to
-              life in the browser.
-            </p>
-          </div>
-          <div className="mb-6">
-            <h3 className="text-blue-700 text-xl mb-6">Linguas que eu falo</h3>
-            <p className="text-xl font-extralight">
-              HTML, CSS, Javascript, React
-            </p>
-          </div>
-          <div className="mb-6">
-            <h3 className="text-blue-700 text-xl mb-6">Ferramentas</h3>
-            <ul>
-              <li className="text-xl font-extralight">Tailwind</li>
-              <li className="text-xl font-extralight">Bootstrap</li>
-              <li className="text-xl font-extralight">Styled Components</li>
-              <li className="text-xl font-extralight">Github</li>
-            </ul>
-          </div>
-          </Slide>
-        </div>
-       
-        <div className="mb-10 w-96 md:w-96 text-center rounded-3xl border-solid border-2 border-gray-200 p-4 bg-white shadow-md ">
         <Slide bottom cascade>
-          <div className="w-full flex justify-center items-center mt-6">
-            <img src="Assets/binary-code.png" />
-          </div>
-          <div className="mb-6">
-            <h3 className="text-2xl font-bold mb-6">Backend Developer</h3>
-            <p className="text-xl font-extralight">
-              I value simple content structure, clean design patterns, and
-              thoughtful interactions.
-            </p>
-          </div>
-          <div className="mb-6">
-            <h3 className="text-blue-700 text-xl mb-6">Linguas que eu falo</h3>
-            <p className="text-xl font-extralight">Nodejs e Firebase </p>
-          </div>
-          <div className="mb-6">
-            <h3 className="text-blue-700 text-xl mb-6">Ferramentas</h3>
-            <ul>
-              <li className="text-xl font-extralight">Express</li>
-              <li className="text-xl font-extralight">Template EJS</li>
-              <li className="text-xl font-extralight">JWT</li>
-            </ul>
-          </div>
-          </Slide>
-        </div>
+            <Cards
+              img={frontImg}
+              title="Frond-End Developer"
+              desc="Minha parte favorita de ser dev, gosto de desenvolver algo que todos possam ver e interagir."
+              title2="Linguas que eu falo"       
+              desc2="Html, Css, Javascript, React"     
+              title3="Ferramentas"
+              desc3="Tailwind"
+              desc3_2="Bootstrap"
+              desc3_3="Styled Components"
+              desc3_4="Github"
+            />
+        </Slide>
+        <Slide bottom cascade>
+            <Cards
+              img={backImg}
+              title="Back-End Developer"
+              desc="Apesar de preferir o front, possuo algum conhecimento no back também para ser um dev completo e construir aplicações completas."
+              title2="Linguas que eu falo"       
+              desc2="Node e Firebase"     
+              title3="Ferramentas"
+              desc3="Express"
+              desc3_2="Template EJS"
+              desc3_3="JWT"
+            />
+        </Slide>
       </div>
   
       <section className="w-full h-full mt-40 border-b-2 border-gray-300" id="projetos">
@@ -192,22 +162,22 @@ function Home() {
           </Fade>
           <div className='grid grid-cols-1 md:grid-cols-6" md:grid-cols-3 gap-4 mt-10 content-center justify-items-center  '>
             <Slide bottom cascade>
-            <div className="w-72 md: w-96bg-blue-300  rounded-3xl h-60 flex justify-center items-center  shadow-2xl">
+            <div className="w-72 md: w-96 bg-blue-700  rounded-3xl h-60 flex justify-center items-center  shadow-2xl">
               <p className="text-2xl text-white">Em Breve...</p>
             </div>
-            <div className="w-72 md: w-96bg-blue-300  rounded-3xl h-60 flex justify-center items-center shadow-2xl">
+            <div className="w-72 md: w-96 bg-blue-700  rounded-3xl h-60 flex justify-center items-center shadow-2xl">
               <p className="text-2xl text-white">Em Breve...</p>
             </div>
-            <div className="w-72 md: w-96bg-blue-300 rounded-3xl h-60 flex justify-center items-center shadow-2xl">
+            <div className="w-72 md: w-96 bg-blue-700 rounded-3xl h-60 flex justify-center items-center shadow-2xl">
               <p className="text-2xl text-white">Em Breve...</p>
             </div>
-            <div className="w-72 md: w-96bg-blue-300  rounded-3xl h-60 flex justify-center items-center shadow-2xl">
+            <div className="w-72 md: w-96 bg-blue-700  rounded-3xl h-60 flex justify-center items-center shadow-2xl">
               <p className="text-2xl text-white">Em Breve...</p>
             </div>
-            <div className="w-72 md: w-96bg-blue-300  rounded-3xl h-60 flex justify-center items-center shadow-2xl">
+            <div className="w-72 md: w-96 bg-blue-700  rounded-3xl h-60 flex justify-center items-center shadow-2xl">
               <p className="text-2xl text-white">Em Breve...</p>
             </div>
-            <div className="w-72 md: w-96bg-blue-300  rounded-3xl h-60 flex justify-center items-center shadow-2xl">
+            <div className="w-72 md: w-96 bg-blue-700  rounded-3xl h-60 flex justify-center items-center shadow-2xl">
               <p className="text-2xl text-white">Em Breve...</p>
             </div>
             </Slide>
@@ -268,14 +238,14 @@ function Home() {
         <div className="flex w-full justify-center mt-6">
           <a href="#">
             <img
-              src="Assets/linkedin.png"
+              src={linkedinrImg}
               alt="linkedin logo"
               className="pr-4"
             />
           </a>
           <a href="#">
             <img
-              src="Assets/github.png"
+              src={githubImg}
               alt="github logo"
               className="bg-white rounded-full"
             />

@@ -3,6 +3,8 @@ import { Link } from "react-router-dom";
 import {AiOutlineRollback} from 'react-icons/ai'
 import Forms from "../Components/Forms.js";
 import Fade from 'react-reveal/Fade'
+import developer from '../Assets/piccoding.svg'
+import manWorking from '../Assets/cara trabalhando.png'
 
 function Contato() {
   return (
@@ -29,14 +31,14 @@ function Contato() {
         </div>
       </header>
       <div className="w-full flex justify-center items-center -mt-10">
-        <img src="Assets/piccoding.svg" width={"100px"} alt="logo"/>
+        <img src={developer} width={"100px"} alt="logo"/>
       </div>
         <section className="w-full h-screen flex justify-center mt-10 justify-around flex-wrap">
          <Fade bottom cascade>
               <div className="text-center w-96">
                 <h2 className="text-2xl mb-6">Complete os campos ao lado para entrar em contato !</h2>
                 <p className="text-xl text-gray-400 font-extralight">Responderei o mais breve possível.</p>
-                <img src='Assets/cara trabalhando.png' alt='Cara trabalhando' className="mt-4"/>
+                <img src={manWorking} alt='Cara trabalhando' className="mt-4"/>
               </div>
               <Forms/>
          </Fade>
