@@ -4,7 +4,30 @@
         "project":"Projects" ,
         "SayHello": "Say Hello",
         "AboutTxt": "Hi, i´m Roberto, nice to meet you",
-        "AboutTxt2": "I'm 17 years old and I'm fascinated by the technology market, the power that programming has to create and solve people's problems in everyday life is what made me fall in love with this area. I do some freelance work in order to help grow companies and my knowledge. "
-       
+        "AboutTxt2": "I'm 17 years old and I'm fascinated by the technology market, the power that programming has to create and solve people's problems in everyday life is what made me fall in love with this area. I do some freelance work in order to help grow companies and my knowledge. ",
+        "CardDesc1":"I'm no expert in design, but I know my way around most of the time, I took a graphic design course and I have a good understanding of the subject.",
+        "CardTitle1":"What i do",
+        "CardTitle2": "Tools",
+        "CardDesc2":"My favorite part of being a dev, I like to develop something that everyone can see and interact with.",
+        "CardTitle3":"Languages i speak",
+        "CardDesc3": "Although I prefer the front, I have some knowledge in the back as well to be a complete dev and build complete applications.",
+        "ViewMore": "View more",
+        "Interested": "Interested ?",
+        "InterestedTxt": "I am always open to new job opportunities and partnerships.",
+        "StartConversation": "Start Conversasion",
+        "StartNewProject": "Start a new Project",
+        "StartNewProjectTxt": "Interested in working together? We must start to talk, I got the coffee.",
+        "Lestgo": "Lets go",
+        "Living&Learning": "Living and Learning",
+        "MyRecentWork":"My Recents Projects",
+        "MyRecentWorkTxt": "Here's some of my projects I've worked on recently. Want to see more?",
+        "ClickHere": "Click Here !",
+        "GoBack":"Go Back",
+        "ContactTxt": "Complete the fields on the side to get in touch!",
+        "ContactTxt2": "I will reply as soon as possible.",
+        "Name":"Your Name",
+        "Number": "Your Number",
+        "Email": "Your Email",
+        "Text": "Your Message"
     }
 }
