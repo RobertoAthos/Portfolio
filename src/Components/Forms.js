@@ -13,8 +13,8 @@ function Forms() {
 
     emailjs
       .sendForm(
-        "service_dxwy6le",
-        "template_ljvwago",
+        "portfolio-gmail",
+        "portfolio",
         form.current,
         "kc7ft4MqMDkvUdoFF"
       )

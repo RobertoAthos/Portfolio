@@ -207,7 +207,7 @@ function Home() {
             <div className="w-full flex justify-center items-center mt-8">
               <button className="border-solid border-2 border-blue-700 text-blue-700 font-bold p-4 rounded-xl hover:bg-blue-700 hover:text-white w-72 mb-20">
                 <Link to="/Contato">
-                  <a href="Contato">{t("StartConvesation")}</a>
+                  <a href="Contato">{t('StartConversation')}</a>
                 </Link>
               </button>
             </div>
@@ -232,7 +232,7 @@ function Home() {
                   href="Contato"
                   className="text-2xl font-bold hover:underline"
                 >
-                  {t("Letsgo")}
+                  {t('Letsgo')}
                 </a>
               </Link>
             </button>
