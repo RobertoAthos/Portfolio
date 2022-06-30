@@ -1,4 +1,4 @@
-import React,{useState} from "react";
+import React,{useState,useEffect} from "react";
 import {Link} from 'react-router-dom'
 import Fade from 'react-reveal/Fade'
 import Slide from 'react-reveal/Slide'
@@ -10,16 +10,16 @@ import backImg from '../Assets/binary-code.png'
 import githubImg from '../Assets/github.png'
 import linkedinrImg from '../Assets/linkedin.png'
 import developer from '../Assets/piccoding.svg'
-import Br from '../Assets/brazil.png'
-import Usa from '../Assets/united-states.png'
+
+import {useTranslation} from 'react-i18next'
+import LngSwitcher from "../Components/LngSwitcher";
+
 
 function Home() {
+  const[nav, setNav]=useState(false)
+  const handleClick = ()=>setNav(!nav)
 
-    const[nav,setNav] = useState(false)
-
-    const handleClick = ()=>{
-      setNav(!nav)
-    }
+  const {t} = useTranslation()
 
   return (
     <div>
@@ -31,15 +31,12 @@ function Home() {
           </h1>
         </div>
         <div className="hidden md:flex items-center">
-        <div className="flex">
-              <button className="bg-none p-2 ml-6 flex justify-center items-center hover:text-fuchsia-500">EN<img src={Usa} alt='Brazil flag' className="ml-4"/></button>
-              <button className="bg-none p-2 flex justify-center items-center hover:text-fuchsia-500 ">PT-BR<img src={Br} alt='Usa flag' className="ml-4"/></button>
-         </div>
+        <LngSwitcher/>
           <a
             href="#projetos"
             className="p-2 mr-6 text-xl hover:text-fuchsia-500  transition duration-300"
           >
-            Projetos
+            {t('project')}
           </a>
          <Link to='/Contato'> 
          <button className='w-56 p-2 rounded-2xl border-solid border-2 border-fuchsia-500  hover:bg-fuchsia-500 hover:text-white transition duration-300 '>
@@ -47,7 +44,7 @@ function Home() {
             href="Contato"
             className="p-2 text-xl "
           >
-            Diga Olá
+            {t('SayHello')}
           </a>
          </button>
           </Link>
@@ -59,11 +56,9 @@ function Home() {
             </div>
 
             <nav className={!nav ? 'hidden' : 'absolute top-0 left-0 w-full h-screen bg-[#141C3A] flex flex-col justify-center items-center' }>
-                <ul className="text-center w-full">
-                    <li className="p-4 w-full border-b-white text-4xl "><a href="#" className="flex justify-center items-center">Pt-br<img src={Br} alt='Brazil flag' className="ml-4"/></a></li>
-                    <li className="p-4 w-full border-b-white text-4xl "><a href="#" className="flex justify-center items-center">Usa<img src={Usa} alt='Brazil flag' className="ml-4"/></a></li>
-                    <li className="p-4 w-full border-b-white text-4xl"><a href="#projetos">Projetos</a></li>
-                    <li className="p-4 w-full border-b-white text-4xl"><Link to='/Contato'><a href="Contato">Diga Olá</a></Link></li>
+          <ul className="text-center w-full">
+                    <li className="p-4 w-full border-b-white text-4xl"><a href="#projetos">{t('project')}</a></li>
+                    <li className="p-4 w-full border-b-white text-4xl"><Link to='/Contato'><a href="Contato">{t('SayHello')}</a></Link></li>
                     <li className="p-4 w-full border-b-white text-4xl"><a href="#">Whatsapp</a></li>
 
                 </ul>
@@ -78,7 +73,7 @@ function Home() {
             Junior Front End Developer
           </h2>
           <p className="text-xl md:text-2xl text-gray-500 font-light ">
-            Transformo sonhos em realidade com códigos.
+            {t('MainDesc')}
           </p>
           
           <div className="w-full flex justify-center items-center mt-9">
@@ -92,10 +87,10 @@ function Home() {
         <div className="text-center pt-20 w-full max-w-screen-lg m-auto leading-relaxed ">
           <Fade bottom cascade>
           <h3 className="text-3xl md:text-4xl text-white font-bold mb-6">
-            Olá, eu sou o Roberto. Prazer em conhece-lo(a).
+            {t('AboutTxt')}
           </h3>
           <p className="text-xl md:text-2xl max-w-screen-md m-auto text-white font-extralight mb-48">
-            Tenho 17 anos e sou fascinado pelo mercado de tecnologia, o poder que a programação possui de criar e resolver problemas das pessoas no cotidiano foi oque me fez apaixonar por essa área. Faço alguns trabalhos freelancer com o intuito de ajudar a crescer as empresas e meu conhecimento. 
+            {t('AboutTxt2')}
           </p>
           </Fade>
         </div>
@@ -109,7 +104,7 @@ function Home() {
               desc="Não sou nenhum especialista em design, mas sei me virar na maioria das vezes, fiz curso de designer gráfico e tenho uma boa noção sobre o assunto."
               title2="O que eu faço"       
               desc2="UX, UI, Web, Mobile, Apps"     
-              title3="Design Tools"
+              title3="Ferramentas"
               desc3="Figma"
               desc3_2="Photoshop"
               desc3_3="Adobe xd"

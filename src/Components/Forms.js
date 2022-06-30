@@ -9,7 +9,7 @@ function Forms() {
   const sendEmail = (e) => {
     e.preventDefault();
 
-    emailjs.sendForm('gmail','template_ljvwago', form.current, 'kc7ft4MqMDkvUdoFF')
+    emailjs.sendForm('service_dxwy6le','template_ljvwago', form.current, 'kc7ft4MqMDkvUdoFF')
       .then((result) => {
           console.log(result.text);
       }, (error) => {
