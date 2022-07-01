@@ -25,9 +25,12 @@
         "GoBack":"Go Back",
         "ContactTxt": "Complete the fields on the side to get in touch!",
         "ContactTxt2": "I will reply as soon as possible.",
-        "Name":"Your Name",
-        "Number": "Your Number",
-        "Email": "Your Email",
-        "Text": "Your Message"
+        "Name":"Your Name:",
+        "Email": "Your Email:",
+        "Message": "Message:",
+        "SendMsg": "Send Message",
+        "Certificates": "Certificates"
+
+        
     }
 }

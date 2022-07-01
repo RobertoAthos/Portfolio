@@ -148,7 +148,9 @@ function Home() {
           />
         </Slide>
       </div>
-
+      <Link to="/Certificados" className="w-full text-center flex justify-center items-center mt-6">
+              <a href="Certificados" className="text-blue-700 underline text-3xl hover:text-blue-800">{t('Certificates')}</a>
+      </Link>
       <section
         className="w-full h-full mt-40 border-b-2 border-gray-300"
         id="projetos"
@@ -169,22 +171,22 @@ function Home() {
           </Fade>
           <div className='grid grid-cols-1 md:grid-cols-6" md:grid-cols-3 gap-4 mt-10 content-center justify-items-center  '>
             <Slide bottom cascade>
-              <div className="w-72 md: w-96 bg-blue-700  rounded-3xl h-60 flex justify-center items-center  shadow-2xl">
+              <div className="w-72 md:w-96 bg-blue-700  rounded-3xl h-60 flex justify-center items-center  shadow-2xl">
                 <p className="text-2xl text-white">Em Breve...</p>
               </div>
-              <div className="w-72 md: w-96 bg-blue-700  rounded-3xl h-60 flex justify-center items-center shadow-2xl">
+              <div className="w-72 md:w-96 bg-blue-700  rounded-3xl h-60 flex justify-center items-center shadow-2xl">
                 <p className="text-2xl text-white">Em Breve...</p>
               </div>
-              <div className="w-72 md: w-96 bg-blue-700 rounded-3xl h-60 flex justify-center items-center shadow-2xl">
+              <div className="w-72 md:w-96 bg-blue-700 rounded-3xl h-60 flex justify-center items-center shadow-2xl">
                 <p className="text-2xl text-white">Em Breve...</p>
               </div>
-              <div className="w-72 md: w-96 bg-blue-700  rounded-3xl h-60 flex justify-center items-center shadow-2xl">
+              <div className="w-72 md:w-96 bg-blue-700  rounded-3xl h-60 flex justify-center items-center shadow-2xl">
                 <p className="text-2xl text-white">Em Breve...</p>
               </div>
-              <div className="w-72 md: w-96 bg-blue-700  rounded-3xl h-60 flex justify-center items-center shadow-2xl">
+              <div className="w-72 md:w-96 bg-blue-700  rounded-3xl h-60 flex justify-center items-center shadow-2xl">
                 <p className="text-2xl text-white">Em Breve...</p>
               </div>
-              <div className="w-72 md: w-96 bg-blue-700  rounded-3xl h-60 flex justify-center items-center shadow-2xl">
+              <div className="w-72 md:w-96 bg-blue-700  rounded-3xl h-60 flex justify-center items-center shadow-2xl">
                 <p className="text-2xl text-white">Em Breve...</p>
               </div>
             </Slide>

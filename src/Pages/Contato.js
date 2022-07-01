@@ -6,6 +6,7 @@ import Fade from "react-reveal/Fade";
 import developer from "../Assets/piccoding.svg";
 import manWorking from "../Assets/cara trabalhando.png";
 import { useTranslation } from "react-i18next";
+import LngSwitcher from "../Components/LngSwitcher";
 
 function Contato() {
   const { t } = useTranslation();
@@ -22,7 +23,8 @@ function Contato() {
             </Link>
           </h1>
         </div>
-        <div>
+        <div className="flex justify-center items-center">
+        <LngSwitcher/>
           <Link to="/">
             <a
               href="Home"
@@ -36,7 +38,7 @@ function Contato() {
       <div className="w-full flex justify-center items-center -mt-10">
         <img src={developer} width={"100px"} alt="logo" />
       </div>
-      <section className="w-full h-screen flex justify-center mt-10 justify-around flex-wrap">
+      <section className="w-full h-screen flex  mt-10 justify-around flex-wrap">
         <Fade bottom cascade>
           <div className="text-center w-96">
             <h2 className="text-2xl mb-6"> {t("ContactTxt")} </h2>

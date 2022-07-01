@@ -3,7 +3,7 @@ import React from 'react'
 
 function Cards({img,title,desc,title2,desc2,title3,desc3,desc3_2, desc3_3, desc3_4}) {
   return (
-    <div className="mb-10 w-96 md:w-96 text-center rounded-3xl border-solid border-2 border-gray-200 p-4 bg-white shadow-md">
+    <div className="mb-10 w-96 md:w-96 text-center rounded-3xl border-solid border-2 border-gray-200 p-4 bg-white shadow-md hover:scale-110 transition duration-200">
     <div className="w-full flex justify-center items-center mt-6">
       <img src={img} alt='imagem ilustrativa'/>
     </div>

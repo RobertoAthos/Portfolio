@@ -25,9 +25,10 @@
         "GoBack":"Voltar",
         "ContactTxt": "Complete os campos ao lado para entrar em contato !",
         "ContactTxt2": "Responderei o mais breve possível.",
-        "Name":"Seu nome",
-        "Number": "Seu númemro",
-        "Email": "Seu email",
-        "Text": "Sua mensagem"
+        "Name":"Seu nome:",
+        "Email": "Seu email:",
+        "Message": "Sua Mensagem:",
+        "SendMsg": "Enviar Mensagem",
+        "Certificates": "Certificados"
     }
 }
